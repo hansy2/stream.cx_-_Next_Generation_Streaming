@@ -6,6 +6,8 @@ define('INC_DIR', ROOT . DS . 'includes' . DS);
 define('LIB_DIR', ROOT . DS . 'lib' . DS);
 define('TPL_DIR', ROOT . DS . 'templates' . DS);
 define('LOG_DIR', ROOT . DS . 'logs' . DS);
+define('P_TPL_DIR', INC_DIR . 'pageTemplates'.DS);
+define('SMARTY_DIR', LIB_DIR.DS.'Smarty-3.1.13'.DS);
 define('SESSION_TIMEOUT', 30);
 
 @ini_set('log_errors','On');

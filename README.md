@@ -9,6 +9,10 @@ License:
 
 * Attribution-ShareAlike 3.0 Unported <http://creativecommons.org/licenses/by-sa/3.0/>
 
+PHP-DevCloud:
+
+<http://streamcx.my.phpcloud.com/admin/>
+
 Project-URL:
 
 <http://github.com/djcrackhome/stream.cx_-_Next_Generation_Streaming>
