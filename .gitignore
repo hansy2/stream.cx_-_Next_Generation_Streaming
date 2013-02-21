@@ -162,7 +162,12 @@ pip-log.txt
 # Mac crap
 .DS_Store
 
-.idea*/
+# PHPStorm IDE related
+.idea
+
+# MySQL
 _mysql
+
+# Temporary files
 _temp
-workspace.xml
+.idea/workspace.xml
