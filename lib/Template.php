@@ -4,7 +4,15 @@ require_once(SMARTY_DIR . 'Smarty.class.php');
 
 class Template extends Smarty
 {
-    private $templateName = 'main.tpl';
+    protected $frameFileNames = array(
+        'frame' => 'frame.tpl',
+        'frameHeader' => 'frameHeader.tpl',
+        'frameFooter' => 'frameFooter.tpl',
+        'frameInclCSS' => 'frameInclCSS.tpl',
+        'frameInclJS' => 'frameInclJS.tpl',
+        'frameMeta' => 'frameMeta.tpl',
+        'frameNavigation' => 'frameNavigation.tpl'
+    );
 
     public function __construct()
     {
@@ -17,5 +25,11 @@ class Template extends Smarty
 
         $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
 
+        $this->assign($this->frameFileNames);
+    }
+
+    public function getFrameFilename()
+    {
+        return $this->frameFileNames['frame'];
     }
 }

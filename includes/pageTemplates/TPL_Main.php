@@ -1,23 +1,41 @@
 <?php
 
 require_once(LIB_DIR . '/Template.php');
+require_once(P_TPL_DIR . '/FrameInterface.php');
 
-class TPL_Main extends Template
+class TPL_Main extends Template implements Frame
 {
+    private $tplFilename = 'main.tpl';
+    private $outputBuffer;
 
-    private $templateName = 'main.tpl';
-
-    public function __construct()
+    public function __construct($bool, array $languageArray)
     {
         parent::__construct();
-
-        $this->setTemplateDir(TPL_DIR . '/raw');
-        $this->setCompileDir(TPL_DIR . '/compile');
-        $this->setConfigDir(TPL_DIR . '/configs');
-        $this->setCacheDir(TPL_DIR . '/cache');
-
-        $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
-
-        $this->assign('app_name', 'Main');
+        $this->assign($languageArray);
+        $this->initTemplate();
+        if (is_bool($bool)) {
+            $this->initFrame($bool);
+        }
+        else {
+            throw new Exception('The first parameter must be boolean!');
+        }
     }
+
+    public function initTemplate()
+    {
+        $this->outputBuffer = $this->fetch($this->tplFilename);
+    }
+
+    public function initFrame($bool)
+    {
+        if ($bool) {
+            $this->assign('frameContent', $this->fetch($this->tplFilename));
+            $this->outputBuffer = $this->fetch(parent::getFrameFilename());
+        }
+    }
+
+    public function returnTemplate() {
+        return $this->outputBuffer;
+    }
+
 }
