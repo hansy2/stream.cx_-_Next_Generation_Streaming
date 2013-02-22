@@ -23,7 +23,8 @@ class Template extends Smarty
         $this->setConfigDir(TPL_DIR . '/configs');
         $this->setCacheDir(TPL_DIR . '/cache');
 
-        $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
+        $this->caching = 0;
+            //Smarty::CACHING_LIFETIME_CURRENT;
 
         $this->assign($this->frameFileNames);
     }

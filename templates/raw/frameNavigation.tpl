@@ -2,25 +2,25 @@
     <div class="container"> <a href="javascript:;" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <i class="icon-reorder"></i> </a>
         <div class="nav-collapse">
             <ul class="nav">
-                <li class="nav-icon"> <a href="#"> <i class="icon-th"></i> Übersicht </a> </li>
-                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-hdd"></i> Radioserver <b class="caret"></b> </a>
+                <li class="nav-icon"> <a href="#main"> <i class="icon-th"></i> Übersicht </a> </li>
+                <li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-hdd"></i> Radioserver <b class="caret"></b> </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Steuerung</a></li>
-                        <li><a href="#">Einstellungen</a></li>
-                        <li class="dropdown"> <a href="#"> Auto-DJ <i class="icon-chevron-right sub-menu-caret"></i> </a>
-                            <ul class="dropdown-menu sub-menu">
-                                <li><a href="#">Playlisten</a></li>
-                                <li><a href="#">Medien-Upload</a></li>
-                                <li><a href="#">Einstellungen</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#srvcontrol">Steuerung</a></li>
+                        <li><a href="#srvsettings">Einstellungen</a></li>
                         <li class="dropdown"> <a href="#"> Werkzeuge <i class="icon-chevron-right sub-menu-caret"></i> </a>
                             <ul class="dropdown-menu sub-menu">
-                                <li><a href="#">Statistiken</a></li>
-                                <li><a href="#">Protokolle</a></li>
-                                <li><a href="#">HTML Tools</a></li>
+                                <li><a href="#srvstats">Statistiken</a></li>
+                                <li><a href="#srvprotocol">Protokolle</a></li>
+                                <li><a href="#srvtools">HTML Tools</a></li>
                             </ul>
                         </li>
+                    </ul>
+                </li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-headphones"></i> Auto DJ <b class="caret"></b> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Playlisten</a></li>
+                        <li><a href="#">Medien-Upload</a></li>
+                        <li><a href="#">Einstellungen</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-money"></i> Guthaben <b class="caret"></b> </a>

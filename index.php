@@ -12,9 +12,9 @@ require_once(INC_DIR . '/initIDS.php');
 
 switch ($_GET['request']) {
     case 'json':
-        if (is_file(P_TPL_DIR .'/TPL_Main.php')) {
-            require_once(P_TPL_DIR.'/TPL_Main.php');
-            $object = new TPL_Main(false, array());
+        if (is_file(P_TPL_DIR .'/TPL_Page2.php')) {
+            require_once(P_TPL_DIR.'/TPL_Page2.php');
+            $object = new TPL_Page2(false, array());
             header('Content-Type: application/json');
             echo json_encode($object->returnTemplate());
         }
