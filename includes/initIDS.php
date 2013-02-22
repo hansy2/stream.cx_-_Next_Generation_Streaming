@@ -12,13 +12,13 @@ try {
     );
 
     if (!is_file($init->config['Logging']['path'])) {
-        if(is_writable(LOG_DIR)) {
+        if (is_writable(LOG_DIR)) {
             touch($init->config['Logging']['path']);
         }
     }
 
-    $init = IDS_Init::init(LIB_DIR .  'IDS/Config/Config.ini.php');
-    $init->config['General']['base_path'] = LIB_DIR . 'IDS/';
+    $init = IDS_Init::init(LIB_DIR . '/IDS/Config/Config.ini.php');
+    $init->config['General']['base_path'] = LIB_DIR . '/IDS/';
     $init->config['General']['use_base_path'] = true;
     $init->config['Caching']['caching'] = 'none';
     $init->config['Logging']['path'] = '../../logs/phpIDS.log';

@@ -1,21 +1,20 @@
 <?php
 
 define('ROOT', dirname(__FILE__));
-define('DS', DIRECTORY_SEPARATOR);
-define('INC_DIR', ROOT . DS . 'includes' . DS);
-define('LIB_DIR', ROOT . DS . 'lib' . DS);
-define('TPL_DIR', ROOT . DS . 'templates' . DS);
-define('LOG_DIR', ROOT . DS . 'logs' . DS);
-define('P_TPL_DIR', INC_DIR . 'pageTemplates'.DS);
-define('SMARTY_DIR', LIB_DIR.DS.'Smarty-3.1.13'.DS);
+define('INC_DIR', ROOT .  '/includes');
+define('LIB_DIR', ROOT . '/lib');
+define('TPL_DIR', ROOT . '/templates');
+define('LOG_DIR', ROOT . '/logs');
+define('P_TPL_DIR', INC_DIR . '/pageTemplates');
+define('SMARTY_DIR', LIB_DIR . '/Smarty-3.1.13/');
 define('SESSION_TIMEOUT', 30);
 
-@ini_set('log_errors','On');
-@ini_set('display_errors','Off');
-@ini_set('error_log', LIB_DIR . 'php_error.log');
+@ini_set('log_errors', 'On');
+@ini_set('display_errors', 'Off');
+@ini_set('error_log', LIB_DIR . '/php_error.log');
 
-if (!is_file(LOG_DIR . 'error_log.log')) {
-    if(is_writable(LOG_DIR)) {
-        touch(LOG_DIR . 'error_log.log');
+if (!is_file(LOG_DIR . '/error_log.log')) {
+    if (is_writable(LOG_DIR)) {
+        touch(LOG_DIR . '/error_log.log');
     }
 }

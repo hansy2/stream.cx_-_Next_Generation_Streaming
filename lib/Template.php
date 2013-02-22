@@ -1,10 +1,9 @@
 <?php
 
-require_once(LIB_DIR . '/Template.php');
+require_once(SMARTY_DIR . 'Smarty.class.php');
 
-class TPL_Main extends Template
+class Template extends Smarty
 {
-
     private $templateName = 'main.tpl';
 
     public function __construct()
@@ -18,6 +17,5 @@ class TPL_Main extends Template
 
         $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
 
-        $this->assign('app_name', 'Main');
     }
 }
