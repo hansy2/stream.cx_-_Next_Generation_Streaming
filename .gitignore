@@ -169,3 +169,4 @@ _mysql
 # Temporary files
 _temp
 .idea/workspace.xml
+_rawtemplates/
