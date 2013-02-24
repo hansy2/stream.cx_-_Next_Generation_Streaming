@@ -1,6 +1,6 @@
 <?php
 
-require_once(LIB_DIR . '/Template.php');
+require_once(LIB_DIR . '/Template.class.php');
 require_once(P_TPL_DIR . '/FrameInterface.php');
 
 class TPL_Main extends Template implements Frame
@@ -8,10 +8,10 @@ class TPL_Main extends Template implements Frame
     private $tplFilename = 'main.tpl';
     private $outputBuffer;
 
-    public function __construct($bool, array $languageArray)
+    public function __construct($bool, $langObject)
     {
         parent::__construct();
-        $this->assign($languageArray);
+        $this->assign('language', $langObject);
         $this->initTemplate();
         if (is_bool($bool)) {
             $this->initFrame($bool);

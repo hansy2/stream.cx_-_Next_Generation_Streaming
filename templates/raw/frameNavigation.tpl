@@ -2,7 +2,7 @@
     <div class="container"> <a href="javascript:;" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <i class="icon-reorder"></i> </a>
         <div class="nav-collapse">
             <ul class="nav">
-                <li class="nav-icon"> <a href="#main"> <i class="icon-th"></i> Übersicht </a> </li>
+                <li class="nav-icon"> <a href="#main"> <i class="icon-th"></i> {$language->frame->navigation->overview} </a> </li>
                 <li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-hdd"></i> Radioserver <b class="caret"></b> </a>
                     <ul class="dropdown-menu">
                         <li><a href="#srvcontrol">Steuerung</a></li>

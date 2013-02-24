@@ -1,6 +1,6 @@
 <?php
 
-require_once(LIB_DIR . '/Template.php');
+require_once(LIB_DIR . '/Template.class.php');
 require_once(P_TPL_DIR . '/FrameInterface.php');
 
 class TPL_Page2 extends Template implements Frame
