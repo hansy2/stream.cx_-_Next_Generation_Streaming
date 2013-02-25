@@ -17,8 +17,8 @@ class Language
             $loadLanguage = $dbDefaultLang;
         } elseif (is_file($langDir . '/' . self::$browserLang . self::$fileExt)) {
             $loadLanguage = self::$browserLang;
-        } elseif (is_file($langDir . '/en' . self::$fileExt)) {
-            $loadLanguage = 'en';
+        } elseif (is_file($langDir . '/de' . self::$fileExt)) {
+            $loadLanguage = 'de';
         } else {
             throw new Exception('No valid language file could be found and loaded!');
         }
