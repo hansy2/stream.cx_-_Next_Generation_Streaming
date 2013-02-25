@@ -6,7 +6,7 @@
             window.location.hash = 'main';
         }
         $(window).bind("hashChange", function (e, newHash, oldHash) {
-            $.getJSON("index.php?request=json&content=" + newHash,
+            $.getJSON("index.php?request=json&content=" + encodeURIComponent(newHash),
                 function (data) {
                     if (oldHash == '') {
                         $contDiv.hide().html(data).wrapInner('<div/>').show();

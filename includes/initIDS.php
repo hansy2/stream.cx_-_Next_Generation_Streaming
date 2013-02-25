@@ -31,6 +31,14 @@ try {
         $compositeLog = new IDS_Log_Composite();
         $compositeLog->addLogger(IDS_Log_File::getInstance($init));
         $compositeLog->execute($result);
+        if (isset($_GET['request']) && $_GET['request'] == 'json') {
+            header('Content-Type: application/json');
+            echo json_encode('Hacking attack recognized!<br />IP was logged!<br /><br />'.$result);
+        }
+        else {
+            echo 'Hacking attack recognized!<br />IP was logged!<br /><br />'.$result;
+        }
+        die();
     }
 } catch (Exception $e) {
     printf(

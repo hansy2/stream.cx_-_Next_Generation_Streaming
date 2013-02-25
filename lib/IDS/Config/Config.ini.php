@@ -31,8 +31,12 @@
     ;json[]          = POST.__jsondata
 
     ; define which fields shouldn't be monitored (a[b]=c should be referenced via a.b)
-    exceptions[]    = GET.__utmz
-    exceptions[]    = GET.__utmc
+    exceptions[] = __utmz
+    exceptions[] = __utmc
+    exceptions[] = COOKIE.__utmz
+    exceptions[] = COOKIE.__utmc
+    exceptions[] = REQUEST.__utmz
+    exceptions[] = REQUEST.__utmc
 
     ; you can use regular expressions for wildcard exceptions - example: /.*foo/i
 

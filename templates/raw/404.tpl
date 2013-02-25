@@ -15,7 +15,7 @@
                 </div> <!-- /error-details -->
 
                 <div class="error-actions">
-                    <a href="./" class="btn btn-large btn-primary">
+                    <a href="#main" class="btn btn-large btn-primary">
                         <i class="icon-chevron-left"></i>
                         &nbsp;
                         Zurück ins Menu
