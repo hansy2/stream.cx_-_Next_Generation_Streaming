@@ -2,24 +2,24 @@
 
 require_once(LIB_DIR . '/Template.class.php');
 
-class TPL_Page2 extends Template
+class TPL_Frame extends Template
 {
-    private $tplFilename = 'page2.tpl';
     private $outputBuffer;
 
     public function __construct(stdClass $langObject)
     {
         parent::__construct();
         $this->assign('language', $langObject);
-        $this->initTemplate();
+        $this->initFrame();
     }
 
-    private function initTemplate()
+    private function initFrame()
     {
-        $this->outputBuffer = $this->fetch($this->tplFilename);
+        $this->outputBuffer = $this->fetch(parent::getFrameFilename());
     }
 
-    public function returnTemplate() {
+    public function returnTemplate()
+    {
         return $this->outputBuffer;
     }
 

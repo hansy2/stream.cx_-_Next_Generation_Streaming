@@ -2,9 +2,9 @@
 
 require_once(LIB_DIR . '/Template.class.php');
 
-class TPL_Page2 extends Template
+class TPL_404 extends Template
 {
-    private $tplFilename = 'page2.tpl';
+    private $tplFilename = '404.tpl';
     private $outputBuffer;
 
     public function __construct(stdClass $langObject)

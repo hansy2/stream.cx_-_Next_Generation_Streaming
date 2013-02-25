@@ -18,7 +18,7 @@
 
 {include file="$frameNavigation"}
 
-{$frameContent}
+<div class="container" id="contentLoad"></div>
 
 {include file="$frameFooter"}
 

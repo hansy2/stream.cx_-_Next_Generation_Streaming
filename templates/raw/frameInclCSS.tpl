@@ -5,3 +5,4 @@
 <link href="./css/slate.css" rel="stylesheet">
 <link href="./css/slate-responsive.css" rel="stylesheet">
 <link href="./css/pages/dashboard.css" rel="stylesheet">
+<link href="./css/components/error.css" rel="stylesheet">
